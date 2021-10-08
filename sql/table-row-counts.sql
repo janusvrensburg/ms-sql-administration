@@ -1,3 +1,4 @@
+
 SELECT [SCH].[name]               AS [Table_Schema]
       ,[OBJ].[name]               AS [Table_Name]
 
@@ -18,3 +19,5 @@ SELECT [SCH].[name]               AS [Table_Schema]
 
  ORDER BY [SCH].[name] ASC
       ,[OBJ].[name] ASC;
+
+GO

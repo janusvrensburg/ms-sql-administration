@@ -1,3 +1,4 @@
+
 SELECT DISTINCT [OBJ].[name]
   FROM [sys].[sysobjects] AS [OBJ]
 
