@@ -6,3 +6,6 @@ SELECT DISTINCT [OBJ].[name]
                ON [TXT].[id] = [OBJ].[id]
 
 WHERE [text] LIKE '%%';
+
+GO
+
