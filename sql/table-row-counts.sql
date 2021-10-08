@@ -21,3 +21,4 @@ SELECT [SCH].[name]               AS [Table_Schema]
       ,[OBJ].[name] ASC;
 
 GO
+
