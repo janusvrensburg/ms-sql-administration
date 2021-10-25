@@ -13,7 +13,12 @@ SELECT DISTINCT [OBJ].[type_desc]   AS [Object_Type]
        INNER JOIN [sys].[syscomments] AS [TXT]
                ON [TXT].[id] = [OBJ].[object_id]
 
- WHERE [TXT].[text] LIKE CONCAT('%', @Search, '%');
+ WHERE [TXT].[text] LIKE CONCAT('%', @Search, '%')
+   AND 
+       (
+            [OBJ].[type_desc] LIKE '%view%'
+         OR [OBJ].[type_desc] LIKE '%stored%procedure%'
+       );
 
 GO
 
