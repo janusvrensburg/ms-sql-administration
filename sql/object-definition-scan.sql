@@ -1,5 +1,5 @@
 
-DECLARE @Search NVARCHAR(MAX) = 'LASTSETTLEDATE'
+DECLARE @Search NVARCHAR(MAX) = ''
 
 SELECT DISTINCT [OBJ].[type_desc]   AS [Object_Type]
       ,[SCH].[name]                 AS [Object_Schema]
