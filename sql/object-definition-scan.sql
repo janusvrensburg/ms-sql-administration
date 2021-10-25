@@ -17,7 +17,11 @@ SELECT DISTINCT [OBJ].[type_desc]   AS [Object_Type]
        (
             [OBJ].[type_desc] LIKE '%view%'
          OR [OBJ].[type_desc] LIKE '%stored%procedure%'
-       );
+       )
+
+ ORDER BY [OBJ].[type_desc] ASC
+      ,[SCH].[name] ASC
+      ,[OBJ].[name] ASC;
 
 GO
 
