@@ -4,7 +4,6 @@ DECLARE @Search NVARCHAR(MAX) = ''
 SELECT DISTINCT [OBJ].[type_desc]   AS [Object_Type]
       ,[SCH].[name]                 AS [Object_Schema]
       ,[OBJ].[name]                 AS [Object_Name]
-
   FROM [sys].[objects] AS [OBJ]
 
        INNER JOIN [sys].[schemas] AS [SCH]
