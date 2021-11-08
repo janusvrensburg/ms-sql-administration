@@ -17,10 +17,10 @@ SELECT [SCH].[name]                                                             
                ON [SCH].[schema_id] = [OBJ].[schema_id]
 
        LEFT JOIN [sys].[sysindexes] AS [IDX]
-              ON [IDX].[id] = [OBJ].[object_id]
+              ON [IDX].[id]    = [OBJ].[object_id]
              AND [IDX].[indid] < 2
 
- WHERE [OBJ].[type] = 'U'
+ WHERE [OBJ].[type] = 'U' -- Tables Only
    AND [SCH].[name] LIKE '%%'
    AND [OBJ].[name] LIKE '%%'
 
