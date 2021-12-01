@@ -1,18 +1,19 @@
 # Table Indexing
 
 
+<!--- Spacing --->
+<br />
+<br />
+<br />
+<!--- Spacing --->
 
-<br />
-<br />
-<br />
 
 <!--- Page Break --->
 <div style="page-break-after: always"> 
 <!--- Page Break --->
 
 
-
-## Table Indexes
+## Tables with Indexes
 
 <br />
 
@@ -39,6 +40,44 @@ SELECT [SCH].[name]             AS [Table_Schema]
 
  ORDER BY [SCH].[name] ASC
       ,[OBJ].[name] ASC;
-
-GO
 ```
+
+
+<!--- Spacing --->
+<br />
+<br />
+<br />
+<!--- Spacing --->
+    
+      
+<!--- Page Break --->
+<div style="page-break-after: always"> 
+<!--- Page Break --->      
+  
+
+## Tables with no Indexes
+
+<br />
+      
+``` SQL    
+SELECT [SCH].[name]             AS [Table_Schema]
+      ,[OBJ].[name]             AS [Table_Name]
+  FROM [sys].[objects] AS [OBJ]
+
+       INNER JOIN [sys].[schemas] AS [SCH]
+               ON [SCH].[schema_id] = [OBJ].[schema_id]
+
+       LEFT JOIN [sys].[indexes] AS [IDX]
+              ON [IDX].[object_id] = [OBJ].[object_id]
+
+ WHERE [OBJ].[type] = 'U'
+   AND [SCH].[name] LIKE '%%'
+   AND [OBJ].[name] LIKE '%%'
+
+   AND [IDX].[name] IS NULL
+
+ ORDER BY [SCH].[name] ASC
+      ,[OBJ].[name] ASC;
+```
+      
+
