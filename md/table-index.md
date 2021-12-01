@@ -35,7 +35,7 @@ SELECT [SCH].[name]             AS [Table_Schema]
                ON [IDX].[object_id] = [OBJ].[object_id]
 
  WHERE [OBJ].[type] = 'U'
-   AND [SCH].[name] LIKE '%dbo%'
+   AND [SCH].[name] LIKE '%%'
    AND [OBJ].[name] LIKE '%%'
 
  ORDER BY [SCH].[name] ASC
