@@ -11,7 +11,7 @@
 
 <br/>
 
-## Example
+## Sample Script
 
 ``` SQL
 -- Fabricate Sample Dataset
@@ -44,6 +44,30 @@ SELECT [ID]
  GROUP BY [ID]
  ORDER BY [ID] ASC;
 ```
+
+<br/>
+
+## Sample Script Output:
+
+``` SQL
+
+(5 rows affected)
+
+ID         TXT
+---------- ----------
+1          A
+1          B
+2          A
+2          B
+2          C
+
+
+ID         TXT
+---------- ----------
+1          A, B
+2          A, B, C
+```
+
 <br/>
 
 ## External Resources
