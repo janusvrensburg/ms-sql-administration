@@ -15,12 +15,16 @@ VALUES ('1', 'A')
       ,('2', 'B')
       ,('2', 'C');
 
+
+
 -- Standard Output
 SELECT [ID]
       ,[TXT]
   FROM @@Data
  ORDER BY [ID] ASC
       ,[TXT] ASC;
+
+
 
 -- Aggregated Output
 SELECT [ID]
