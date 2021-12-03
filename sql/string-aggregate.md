@@ -11,6 +11,8 @@
 
 <br/>
 
+## Example
+
 ``` SQL
 -- Fabricate Sample Dataset
 DECLARE @@Data AS TABLE
@@ -42,6 +44,7 @@ SELECT [ID]
  GROUP BY [ID]
  ORDER BY [ID] ASC;
 ```
+<br/>
 
 ## External Resources
 
