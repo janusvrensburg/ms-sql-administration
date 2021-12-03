@@ -52,6 +52,7 @@ SELECT [ID]
 ```
 (5 rows affected)
 
+
 ID         TXT
 ---------- ----------
 1          A
