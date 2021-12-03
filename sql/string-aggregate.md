@@ -2,7 +2,8 @@
 
 <br/>
 
-**Applies to:**
+## Compatibility
+
  - SQL Server 2017 (14.x) & later
  - Azure SQL Database
  - Azure SQL Managed Instance
@@ -41,3 +42,7 @@ SELECT [ID]
  GROUP BY [ID]
  ORDER BY [ID] ASC;
 ```
+
+## External Resources
+
+- [Microsoft Docs: STRING_AGG](https://docs.microsoft.com/en-us/sql/t-sql/functions/string-agg-transact-sql?view=sql-server-ver15)
