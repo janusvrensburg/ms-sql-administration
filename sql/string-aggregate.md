@@ -1,6 +1,7 @@
 # String Aggregation
 
 ``` SQL
+-- Fabricate Sample Dataset
 DECLARE @@Data AS TABLE
        (
          [ID]  VARCHAR(10)
