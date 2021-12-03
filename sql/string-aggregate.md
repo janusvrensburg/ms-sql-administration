@@ -31,7 +31,3 @@ SELECT [ID]
  GROUP BY [ID]
  ORDER BY [ID] ASC;
 ```
-
-<br/>
-<br/>
-<br/>
