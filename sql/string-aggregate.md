@@ -24,9 +24,9 @@ DECLARE @@Data AS TABLE
 INSERT INTO @@Data
 VALUES ('1', 'A')
       ,('1', 'B')
-      ,('2', 'A')
-      ,('2', 'B')
-      ,('2', 'C');
+      ,('2', 'C')
+      ,('2', 'D')
+      ,('2', 'E');
 
 
 -- Standard Output
@@ -56,15 +56,15 @@ ID         TXT
 ---------- ----------
 1          A
 1          B
-2          A
-2          B
 2          C
+2          D
+2          E
 
 
 ID         TXT
 ---------- ----------
 1          A, B
-2          A, B, C
+2          C, D, E
 ```
 
 <br/>
