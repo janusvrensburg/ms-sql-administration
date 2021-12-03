@@ -2,7 +2,7 @@
 
 <br/>
 
-Applies to:
+**Applies to:**
  - SQL Server 2017 (14.x) & later
  - Azure SQL Database
  - Azure SQL Managed Instance
