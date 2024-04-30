@@ -10,10 +10,21 @@ SELECT [TAB].[TABLE_SCHEMA] AS [TableSchema]
       ,[COL].[COLUMN_NAME] AS [ColumnName]
 
       ,(CASE WHEN [COL].[DATA_TYPE] IN ('VARCHAR', 'CHAR', 'NVARCHAR', 'NCHAR', 'VARBINARY', 'BINARY', 'TEXT')
-             THEN CONCAT(UPPER([COL].[DATA_TYPE]), '(', IIF([COL].[CHARACTER_MAXIMUM_LENGTH] = '-1', 'MAX', CONVERT(NVARCHAR(5), [COL].[CHARACTER_MAXIMUM_LENGTH])), ')', IIF([COL].[IS_NULLABLE] = 'NO', ' NOT NULL', ' NULL'))
+             THEN CONCAT(
+                          UPPER([COL].[DATA_TYPE])
+                         ,'(', IIF([COL].[CHARACTER_MAXIMUM_LENGTH] = '-1', 'MAX', CONVERT(NVARCHAR(5), [COL].[CHARACTER_MAXIMUM_LENGTH])), ')'
+                         ,IIF([COL].[IS_NULLABLE] = 'NO', ' NOT NULL', ' NULL')
+                        )
              WHEN [COL].[DATA_TYPE] IN ('DECIMAL', 'NUMERIC')
-             THEN CONCAT(UPPER([COL].[DATA_TYPE]), '(', [COL].[NUMERIC_PRECISION], ',', [COL].[NUMERIC_SCALE], ')', IIF([COL].[IS_NULLABLE] = 'NO', ' NOT NULL', ' NULL'))
-             ELSE CONCAT(UPPER([COL].[DATA_TYPE]), IIF([COL].[IS_NULLABLE] = 'NO', ' NOT NULL', ' NULL'))
+             THEN CONCAT(
+                          UPPER([COL].[DATA_TYPE])
+                         ,'(', [COL].[NUMERIC_PRECISION], ',', [COL].[NUMERIC_SCALE], ')'
+                         ,IIF([COL].[IS_NULLABLE] = 'NO', ' NOT NULL', ' NULL')
+                        )
+             ELSE CONCAT(
+                          UPPER([COL].[DATA_TYPE])
+                         ,IIF([COL].[IS_NULLABLE] = 'NO', ' NOT NULL', ' NULL')
+                        )
              END) AS [DataType]
 
   FROM [INFORMATION_SCHEMA].[TABLES] AS [TAB]
